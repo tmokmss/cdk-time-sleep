@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { CustomResource, Duration, Stack } from 'aws-cdk-lib';
+import { CustomResource, Duration } from 'aws-cdk-lib';
 import { Code, Runtime, RuntimeFamily, SingletonFunction } from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
 import { ResourceProperties } from './types';
