@@ -1,8 +1,9 @@
 {
-  "name": "cdk-time-sleep",
+  "name": "cdk-time-seep",
+  "description": "Sleep during deployment (equivalent with Terraform time_sleep)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mtomooka/cdk-time-sleep.git"
+    "url": "https://github.com/tmokmss/cdk-time-sleep.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -29,17 +30,20 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Masashi Tomooka",
-    "email": "mtomooka@amazon.co.jp",
+    "name": "tmokmss",
+    "email": "tomookam@live.jp",
     "organization": false
   },
   "devDependencies": {
+    "@aws-cdk/integ-runner": "^2.38.0",
+    "@aws-cdk/integ-tests-alpha": "^2.38.0-alpha.0",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "aws-cdk-lib": "2.1.0",
-    "constructs": "10.0.5",
+    "aws-cdk": "^2.38.0",
+    "aws-cdk-lib": "^2.38.0",
+    "constructs": "^10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^3.5.3",
@@ -61,7 +65,10 @@
     "constructs": "^10.0.5"
   },
   "keywords": [
-    "cdk"
+    "aws",
+    "aws-cdk",
+    "cdk",
+    "lambda"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",

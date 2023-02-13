@@ -1,0 +1,124 @@
+{
+ "Resources": {
+  "Queue11B0C5920": {
+   "Type": "AWS::SQS::Queue",
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "Sleep10seconds": {
+   "Type": "Custom::TimeSleep",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f981117264",
+      "Arn"
+     ]
+    },
+    "createDurationSeconds": 10,
+    "destroyDurationSeconds": 10
+   },
+   "DependsOn": [
+    "Queue11B0C5920"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9ServiceRole47E386BD": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f981117264": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+     },
+     "S3Key": "df8737321258cce921fd096f6128fadfe595aaf07bd73e04960c484ea6adcd2b.zip"
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9ServiceRole47E386BD",
+      "Arn"
+     ]
+    },
+    "Handler": "index.handler",
+    "MemorySize": 128,
+    "Runtime": "nodejs18.x",
+    "Timeout": 900
+   },
+   "DependsOn": [
+    "TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9ServiceRole47E386BD"
+   ]
+  },
+  "Queue26CB7866F": {
+   "Type": "AWS::SQS::Queue",
+   "DependsOn": [
+    "Sleep10seconds"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

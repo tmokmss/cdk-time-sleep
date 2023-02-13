@@ -87,6 +87,10 @@
       "description": "Only compile",
       "steps": [
         {
+          "exec": "npm ci && npm run build",
+          "cwd": "lambda"
+        },
+        {
           "exec": "jsii --silence-warnings=reserved-word"
         }
       ]
@@ -208,6 +212,9 @@
         },
         {
           "spawn": "eslint"
+        },
+        {
+          "exec": "yarn tsc -p tsconfig.dev.json && yarn integ-runner"
         }
       ]
     },
@@ -247,19 +254,19 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='aws-cdk-lib,constructs'"
+          "exec": "npm-check-updates --dep dev --upgrade --target=minor"
         },
         {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='aws-cdk-lib,constructs'"
+          "exec": "npm-check-updates --dep optional --upgrade --target=minor"
         },
         {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='aws-cdk-lib,constructs'"
+          "exec": "npm-check-updates --dep peer --upgrade --target=minor"
         },
         {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='aws-cdk-lib,constructs'"
+          "exec": "npm-check-updates --dep prod --upgrade --target=minor"
         },
         {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='aws-cdk-lib,constructs'"
+          "exec": "npm-check-updates --dep bundle --upgrade --target=minor"
         },
         {
           "exec": "yarn install --check-files"

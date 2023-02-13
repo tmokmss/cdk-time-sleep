@@ -1,15 +1,35 @@
 const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
-  author: 'Masashi Tomooka',
-  authorAddress: 'mtomooka@amazon.co.jp',
-  cdkVersion: '2.1.0',
+  author: 'tmokmss',
+  authorAddress: 'tomookam@live.jp',
+  cdkVersion: '2.1.0', // For using @aws-cdk/integ-runner
   defaultReleaseBranch: 'main',
-  name: 'cdk-time-sleep',
-  repositoryUrl: 'https://github.com/mtomooka/cdk-time-sleep.git',
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  name: 'cdk-time-seep',
+  repositoryUrl: 'https://github.com/tmokmss/cdk-time-sleep.git',
+  eslintOptions: {
+    ignorePatterns: ['example/**/*', 'lambda/**/*', 'test/assets/**/*', 'test/*.snapshot/**/*', '*.d.ts'],
+  },
+  gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*'],
+  keywords: ['aws', 'cdk', 'lambda', 'aws-cdk'],
+  tsconfigDev: {
+    exclude: ['example', 'test/*.integ.snapshot'],
+  },
+  devDeps: [
+    'aws-cdk@^2.38.0',
+    'aws-cdk-lib@^2.38.0',
+    'constructs@^10.0.5',
+    '@aws-cdk/integ-runner@^2.38.0',
+    '@aws-cdk/integ-tests-alpha@^2.38.0-alpha.0',
+  ],
+  peerDependencyOptions: {
+    pinnedDevDependency: false,
+  },
+  description: 'Sleep during deployment (equivalent with Terraform time_sleep)',
 });
+// Bundle custom resource handler Lambda code
+project.projectBuild.compileTask.prependExec('npm ci && npm run build', {
+  cwd: 'lambda',
+});
+// Run integ-test
+project.projectBuild.testTask.exec('yarn tsc -p tsconfig.dev.json && yarn integ-runner');
 project.synth();

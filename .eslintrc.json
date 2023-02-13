@@ -34,12 +34,11 @@
     }
   },
   "ignorePatterns": [
-    "*.js",
-    "!.projenrc.js",
-    "*.d.ts",
-    "node_modules/",
-    "*.generated.ts",
-    "coverage"
+    "example/**/*",
+    "lambda/**/*",
+    "test/assets/**/*",
+    "test/*.snapshot/**/*",
+    "*.d.ts"
   ],
   "rules": {
     "indent": [
