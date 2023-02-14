@@ -6,16 +6,16 @@ import { ResourceProperties } from './types';
 
 export interface TimeSleepProps {
   /**
-   * The duration to sleep when this resource is created
-   * Currently it is limited up to 15 mins
+   * The duration to sleep when this resource is created.
+   * Currently it is limited up to 15 mins.
    *
    * @default no sleep (0 seconds)
    */
   readonly createDuration?: Duration;
 
   /**
-   * The duration to sleep when this resource is deleted
-   * Currently it is limited up to 15 mins
+   * The duration to sleep when this resource is deleted.
+   * Currently it is limited up to 15 mins.
    *
    * @default no sleep (0 seconds)
    */
