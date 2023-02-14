@@ -31,7 +31,6 @@ var handler = async (event, context) => {
         await (0, import_promises.setTimeout)(event.ResourceProperties.createDurationSeconds * 1e3);
         break;
       case "Update":
-        await (0, import_promises.setTimeout)(event.ResourceProperties.createDurationSeconds * 1e3);
         break;
       case "Delete":
         await (0, import_promises.setTimeout)(event.ResourceProperties.destroyDurationSeconds * 1e3);

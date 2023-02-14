@@ -5,16 +5,22 @@ import { Construct } from 'constructs';
 import { ResourceProperties } from './types';
 
 export interface TimeSleepProps {
+  /**
+   * The duration to sleep when this resource is created
+   * Currently it is limited up to 15 mins
+   *
+   * @default no sleep (0 seconds)
+   */
   readonly createDuration?: Duration;
+
+  /**
+   * The duration to sleep when this resource is deleted
+   * Currently it is limited up to 15 mins
+   *
+   * @default no sleep (0 seconds)
+   */
   readonly destroyDuration?: Duration;
 }
-
-/**
- * API design
- * TimeSleep.createAfter(res1, res2, seconds)
- * TimeSleep.deleteAfter(res1, res2, seconds)
- * TimeSleep.addSleep(res1, res2, {createSeconds, destroySeconds}})
- */
 
 export class TimeSleep extends Construct {
   constructor(scope: Construct, id: string, props: TimeSleepProps) {

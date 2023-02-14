@@ -1,6 +1,6 @@
-import { Handler } from 'aws-lambda';
-import { setTimeout } from 'timers/promises';
+import type { Handler } from 'aws-lambda';
 import type { ResourceProperties } from '../src/types';
+import { setTimeout } from 'timers/promises';
 
 type Event = {
   RequestType: 'Create' | 'Update' | 'Delete';
@@ -19,7 +19,7 @@ export const handler: Handler<Event> = async (event, context) => {
         await setTimeout(event.ResourceProperties.createDurationSeconds * 1000);
         break;
       case 'Update':
-        await setTimeout(event.ResourceProperties.createDurationSeconds * 1000);
+        // await setTimeout(event.ResourceProperties.createDurationSeconds * 1000);
         break;
       case 'Delete':
         await setTimeout(event.ResourceProperties.destroyDurationSeconds * 1000);

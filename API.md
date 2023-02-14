@@ -4,8 +4,6 @@
 
 ### TimeSleep <a name="TimeSleep" id="cdk-time-seep.TimeSleep"></a>
 
-API design TimeSleep.createAfter(res1, res2, seconds) TimeSleep.deleteAfter(res1, res2, seconds) TimeSleep.addSleep(res1, res2, {createSeconds, destroySeconds}}).
-
 #### Initializers <a name="Initializers" id="cdk-time-seep.TimeSleep.Initializer"></a>
 
 ```typescript
@@ -133,8 +131,8 @@ const timeSleepProps: TimeSleepProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-time-seep.TimeSleepProps.property.createDuration">createDuration</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
-| <code><a href="#cdk-time-seep.TimeSleepProps.property.destroyDuration">destroyDuration</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
+| <code><a href="#cdk-time-seep.TimeSleepProps.property.createDuration">createDuration</a></code> | <code>aws-cdk-lib.Duration</code> | The duration to sleep when this resource is created Currently it is limited up to 15 mins. |
+| <code><a href="#cdk-time-seep.TimeSleepProps.property.destroyDuration">destroyDuration</a></code> | <code>aws-cdk-lib.Duration</code> | The duration to sleep when this resource is deleted Currently it is limited up to 15 mins. |
 
 ---
 
@@ -145,6 +143,9 @@ public readonly createDuration: Duration;
 ```
 
 - *Type:* aws-cdk-lib.Duration
+- *Default:* no sleep (0 seconds)
+
+The duration to sleep when this resource is created Currently it is limited up to 15 mins.
 
 ---
 
@@ -155,6 +156,9 @@ public readonly destroyDuration: Duration;
 ```
 
 - *Type:* aws-cdk-lib.Duration
+- *Default:* no sleep (0 seconds)
+
+The duration to sleep when this resource is deleted Currently it is limited up to 15 mins.
 
 ---
 

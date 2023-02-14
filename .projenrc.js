@@ -12,7 +12,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*'],
   keywords: ['aws', 'cdk', 'lambda', 'aws-cdk'],
   tsconfigDev: {
-    exclude: ['example', 'test/*.integ.snapshot'],
+    exclude: ['example', 'test/*.snapshot'],
   },
   devDeps: [
     'aws-cdk@^2.38.0',
