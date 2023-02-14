@@ -27,7 +27,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   description: 'Sleep during deployment (equivalent with Terraform time_sleep)',
 });
 // Bundle custom resource handler Lambda code
-project.projectBuild.compileTask.prependExec('npm ci && npm run build', {
+project.projectBuild.compileTask.prependExec('yarn install  --frozen-lockfile && yarn build', {
   cwd: 'lambda',
 });
 // Run integ-test
