@@ -4,7 +4,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'tomookam@live.jp',
   cdkVersion: '2.1.0', // For using @aws-cdk/integ-runner
   defaultReleaseBranch: 'main',
-  name: 'cdk-time-seep',
+  name: 'cdk-time-sleep',
   repositoryUrl: 'https://github.com/tmokmss/cdk-time-sleep.git',
   eslintOptions: {
     ignorePatterns: ['example/**/*', 'lambda/**/*', 'test/assets/**/*', 'test/*.snapshot/**/*', '*.d.ts'],

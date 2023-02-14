@@ -1,5 +1,5 @@
 {
-  "name": "cdk-time-seep",
+  "name": "cdk-time-sleep",
   "description": "Sleep during deployment (equivalent with Terraform time_sleep)",
   "repository": {
     "type": "git",

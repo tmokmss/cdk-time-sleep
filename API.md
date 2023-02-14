@@ -2,39 +2,39 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### TimeSleep <a name="TimeSleep" id="cdk-time-seep.TimeSleep"></a>
+### TimeSleep <a name="TimeSleep" id="cdk-time-sleep.TimeSleep"></a>
 
-#### Initializers <a name="Initializers" id="cdk-time-seep.TimeSleep.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk-time-sleep.TimeSleep.Initializer"></a>
 
 ```typescript
-import { TimeSleep } from 'cdk-time-seep'
+import { TimeSleep } from 'cdk-time-sleep'
 
 new TimeSleep(scope: Construct, id: string, props: TimeSleepProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-time-seep.TimeSleep.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-time-seep.TimeSleep.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-time-seep.TimeSleep.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-time-seep.TimeSleepProps">TimeSleepProps</a></code> | *No description.* |
+| <code><a href="#cdk-time-sleep.TimeSleep.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk-time-sleep.TimeSleep.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk-time-sleep.TimeSleep.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-time-sleep.TimeSleepProps">TimeSleepProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-time-seep.TimeSleep.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk-time-sleep.TimeSleep.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-time-seep.TimeSleep.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="cdk-time-sleep.TimeSleep.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-time-seep.TimeSleep.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="cdk-time-sleep.TimeSleep.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-time-seep.TimeSleepProps">TimeSleepProps</a>
+- *Type:* <a href="#cdk-time-sleep.TimeSleepProps">TimeSleepProps</a>
 
 ---
 
@@ -42,11 +42,11 @@ new TimeSleep(scope: Construct, id: string, props: TimeSleepProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-time-seep.TimeSleep.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdk-time-sleep.TimeSleep.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-time-seep.TimeSleep.toString"></a>
+##### `toString` <a name="toString" id="cdk-time-sleep.TimeSleep.toString"></a>
 
 ```typescript
 public toString(): string
@@ -58,14 +58,14 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-time-seep.TimeSleep.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdk-time-sleep.TimeSleep.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="cdk-time-seep.TimeSleep.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="cdk-time-sleep.TimeSleep.isConstruct"></a>
 
 ```typescript
-import { TimeSleep } from 'cdk-time-seep'
+import { TimeSleep } from 'cdk-time-sleep'
 
 TimeSleep.isConstruct(x: any)
 ```
@@ -86,7 +86,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-time-seep.TimeSleep.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="cdk-time-sleep.TimeSleep.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -98,11 +98,11 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-time-seep.TimeSleep.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdk-time-sleep.TimeSleep.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-time-seep.TimeSleep.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="cdk-time-sleep.TimeSleep.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -117,12 +117,12 @@ The tree node.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### TimeSleepProps <a name="TimeSleepProps" id="cdk-time-seep.TimeSleepProps"></a>
+### TimeSleepProps <a name="TimeSleepProps" id="cdk-time-sleep.TimeSleepProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-time-seep.TimeSleepProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="cdk-time-sleep.TimeSleepProps.Initializer"></a>
 
 ```typescript
-import { TimeSleepProps } from 'cdk-time-seep'
+import { TimeSleepProps } from 'cdk-time-sleep'
 
 const timeSleepProps: TimeSleepProps = { ... }
 ```
@@ -131,12 +131,12 @@ const timeSleepProps: TimeSleepProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-time-seep.TimeSleepProps.property.createDuration">createDuration</a></code> | <code>aws-cdk-lib.Duration</code> | The duration to sleep when this resource is created Currently it is limited up to 15 mins. |
-| <code><a href="#cdk-time-seep.TimeSleepProps.property.destroyDuration">destroyDuration</a></code> | <code>aws-cdk-lib.Duration</code> | The duration to sleep when this resource is deleted Currently it is limited up to 15 mins. |
+| <code><a href="#cdk-time-sleep.TimeSleepProps.property.createDuration">createDuration</a></code> | <code>aws-cdk-lib.Duration</code> | The duration to sleep when this resource is created Currently it is limited up to 15 mins. |
+| <code><a href="#cdk-time-sleep.TimeSleepProps.property.destroyDuration">destroyDuration</a></code> | <code>aws-cdk-lib.Duration</code> | The duration to sleep when this resource is deleted Currently it is limited up to 15 mins. |
 
 ---
 
-##### `createDuration`<sup>Optional</sup> <a name="createDuration" id="cdk-time-seep.TimeSleepProps.property.createDuration"></a>
+##### `createDuration`<sup>Optional</sup> <a name="createDuration" id="cdk-time-sleep.TimeSleepProps.property.createDuration"></a>
 
 ```typescript
 public readonly createDuration: Duration;
@@ -149,7 +149,7 @@ The duration to sleep when this resource is created Currently it is limited up t
 
 ---
 
-##### `destroyDuration`<sup>Optional</sup> <a name="destroyDuration" id="cdk-time-seep.TimeSleepProps.property.destroyDuration"></a>
+##### `destroyDuration`<sup>Optional</sup> <a name="destroyDuration" id="cdk-time-sleep.TimeSleepProps.property.destroyDuration"></a>
 
 ```typescript
 public readonly destroyDuration: Duration;
