@@ -39,7 +39,7 @@ export class TimeSleep extends Construct {
 
     const properties: ResourceProperties = {
       createDurationSeconds: props.createDuration?.toSeconds() ?? 0,
-      destroyDurationSeconds: props.createDuration?.toSeconds() ?? 0,
+      destroyDurationSeconds: props.destroyDuration?.toSeconds() ?? 0,
     };
 
     new CustomResource(this, 'Default', {

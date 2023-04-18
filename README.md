@@ -35,3 +35,10 @@ const queue2 = new Queue(this, 'Queue2');
 sleep10s.node.addDependency(queue1);
 queue2.node.addDependency(sleep10s);
 ```
+
+## For maintainers
+```sh
+# Deploy a test stack
+cd test
+npx cdk deploy --app "npx ts-node integ.time-sleep.ts" IntegTest
+```

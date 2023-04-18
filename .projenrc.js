@@ -9,7 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   eslintOptions: {
     ignorePatterns: ['example/**/*', 'lambda/**/*', 'test/assets/**/*', 'test/*.snapshot/**/*', '*.d.ts'],
   },
-  gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*'],
+  gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*', "test/cdk.out"],
   keywords: ['aws', 'cdk', 'lambda', 'aws-cdk'],
   tsconfigDev: {
     exclude: ['example', 'test/*.snapshot'],
