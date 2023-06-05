@@ -1,3 +1,4 @@
+import { readFileSync } from 'fs';
 import { join } from 'path';
 import { CustomResource, Duration } from 'aws-cdk-lib';
 import { Code, Runtime, RuntimeFamily, SingletonFunction } from 'aws-cdk-lib/aws-lambda';
@@ -28,8 +29,8 @@ export class TimeSleep extends Construct {
 
     const handler = new SingletonFunction(this, 'CustomResourceHandler', {
       // Use raw string to avoid from tightening CDK version requirement
-      runtime: new Runtime('nodejs18.x', RuntimeFamily.NODEJS),
-      code: Code.fromAsset(join(__dirname, '../lambda/dist')),
+      runtime: new Runtime('nodejs18.x', RuntimeFamily.NODEJS, { supportsInlineCode: true }),
+      code: Code.fromInline(readFileSync(join(__dirname, '../', 'lambda', 'dist', 'index.js')).toString()),
       handler: 'index.handler',
       uuid: '494c1b46-0d2f-4e3b-9bfd-0b2cf10162f9', // generated for this construct
       lambdaPurpose: 'TimeSleepCustomResourceHandler',

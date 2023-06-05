@@ -4,7 +4,6 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "alwaysStrict": true,
-    "charset": "utf8",
     "lib": ["ES2022", "dom"],
     "module": "ES2022",
     "moduleResolution": "node",
