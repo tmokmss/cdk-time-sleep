@@ -38,7 +38,8 @@
     "lambda/**/*",
     "test/assets/**/*",
     "test/*.snapshot/**/*",
-    "*.d.ts"
+    "*.d.ts",
+    "!.projenrc.js"
   ],
   "rules": {
     "indent": [
