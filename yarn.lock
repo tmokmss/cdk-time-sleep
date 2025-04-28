@@ -47,7 +47,7 @@
     jsonschema "~1.4.1"
     semver "^7.7.1"
 
-"@aws-cdk/integ-runner@^2.38.0":
+"@aws-cdk/integ-runner@^2.186.4":
   version "2.186.4"
   resolved "https://registry.yarnpkg.com/@aws-cdk/integ-runner/-/integ-runner-2.186.4.tgz#f06162277daeba0bc282df18989649758d9eeeb3"
   integrity sha512-c8L0w24C23/SuH86I4PPv0OuwZxUYQC/MobFMF+G5oWXbNJdm72VMk/egEsgo4GbQegR+c7vs0JRyx5H6o0fxQ==
@@ -57,10 +57,10 @@
   optionalDependencies:
     fsevents "2.3.2"
 
-"@aws-cdk/integ-tests-alpha@^2.38.0-alpha.0":
-  version "2.38.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/integ-tests-alpha/-/integ-tests-alpha-2.38.0-alpha.0.tgz#5ca57e4ad64517a919d4f54298982ce8c11dd441"
-  integrity sha512-46Kw3v6ZiU3JyGz/W68BxHimbSNa7+yDISSrbLHoCt8Zx42IThpWchEk4ptVrHUTH+PFyDwAosM1YtQEXR5BXQ==
+"@aws-cdk/integ-tests-alpha@^2.192.0-alpha.0":
+  version "2.192.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/integ-tests-alpha/-/integ-tests-alpha-2.192.0-alpha.0.tgz#b76327d7a5614f868b625ebc9f28ea761a8cf969"
+  integrity sha512-hSLcG0JsT1bkI0LWGDh68n1gcAXWWBerxLqgc77AGwUlrqo1SogQhSS0MMMlAKNey9bZ3/jquP6xDf0zlr9oSQ==
 
 "@aws-cdk/service-spec-types@^0.0.135":
   version "0.0.135"
