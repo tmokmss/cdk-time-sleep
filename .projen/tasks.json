@@ -210,7 +210,8 @@
       "name": "release",
       "description": "Prepare a release from \"main\" branch",
       "env": {
-        "RELEASE": "true"
+        "RELEASE": "true",
+        "MAJOR": "1"
       },
       "steps": [
         {
@@ -280,7 +281,7 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,eslint-import-resolver-typescript,eslint-plugin-import,jest,jsii-diff,jsii-pacmak,projen,ts-jest,ts-node,typescript"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@aws-cdk/integ-runner,@aws-cdk/integ-tests-alpha,@types/jest,@types/node,eslint-import-resolver-typescript,eslint-plugin-import,jest,jsii-diff,jsii-pacmak,projen,ts-jest,ts-node,typescript"
         },
         {
           "exec": "yarn install --check-files"

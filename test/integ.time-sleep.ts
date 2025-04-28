@@ -21,9 +21,9 @@ class TestStack extends Stack {
   }
 }
 
-const stack = new TestStack(app, 'IntegTest');
+const stack = new TestStack(app, 'CdkTimeSleepIntegTestStack');
 
-new IntegTest(app, 'Test', {
+new IntegTest(app, 'CdkTimeSleepIntegTest', {
   testCases: [stack],
   diffAssets: true,
 });

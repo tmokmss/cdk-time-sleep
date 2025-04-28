@@ -1,27 +1,28 @@
 {
-  "version": "29.0.0",
+  "version": "43.0.0",
   "artifacts": {
-    "IntegTest.assets": {
+    "CdkTimeSleepIntegTestStack.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "IntegTest.assets.json",
+        "file": "CdkTimeSleepIntegTestStack.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "IntegTest": {
+    "CdkTimeSleepIntegTestStack": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "IntegTest.template.json",
+        "templateFile": "CdkTimeSleepIntegTestStack.template.json",
+        "terminationProtection": false,
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c083d4bb9af5e5c158e9cc8ec8c0dca80807bf9399edc6a7fbe95233052f5c93.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/7ca1d86f5874f4c75158d601891400ee33a3c644188ee58cba51c580ad2d6558.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "IntegTest.assets"
+          "CdkTimeSleepIntegTestStack.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -30,67 +31,134 @@
         }
       },
       "dependencies": [
-        "IntegTest.assets"
+        "CdkTimeSleepIntegTestStack.assets"
       ],
       "metadata": {
-        "/IntegTest/Queue1/Resource": [
+        "/CdkTimeSleepIntegTestStack/Queue1": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkTimeSleepIntegTestStack/Queue1/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "Queue11B0C5920"
           }
         ],
-        "/IntegTest/Sleep10seconds/Default/Default": [
+        "/CdkTimeSleepIntegTestStack/Sleep10seconds/CustomResourceHandler": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "runtime": "*",
+              "code": "*",
+              "handler": "*",
+              "uuid": "*",
+              "lambdaPurpose": "*",
+              "timeout": "*",
+              "memorySize": "*"
+            }
+          }
+        ],
+        "/CdkTimeSleepIntegTestStack/Sleep10seconds/Default": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkTimeSleepIntegTestStack/Sleep10seconds/Default/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "Sleep10seconds"
           }
         ],
-        "/IntegTest/TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9/ServiceRole/Resource": [
+        "/CdkTimeSleepIntegTestStack/TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "runtime": "*",
+              "code": "*",
+              "handler": "*",
+              "timeout": "*",
+              "memorySize": "*"
+            }
+          }
+        ],
+        "/CdkTimeSleepIntegTestStack/TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9/ServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "assumedBy": {
+                "principalAccount": "*",
+                "assumeRoleAction": "*"
+              },
+              "managedPolicies": [
+                {
+                  "managedPolicyArn": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "/CdkTimeSleepIntegTestStack/TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9/ServiceRole/ImportServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkTimeSleepIntegTestStack/TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9ServiceRole47E386BD"
           }
         ],
-        "/IntegTest/TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9/Resource": [
+        "/CdkTimeSleepIntegTestStack/TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f9/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TimeSleepCustomResourceHandler494c1b460d2f4e3b9bfd0b2cf10162f981117264"
           }
         ],
-        "/IntegTest/Queue2/Resource": [
+        "/CdkTimeSleepIntegTestStack/Queue2": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkTimeSleepIntegTestStack/Queue2/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "Queue26CB7866F"
           }
         ],
-        "/IntegTest/BootstrapVersion": [
+        "/CdkTimeSleepIntegTestStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/IntegTest/CheckBootstrapVersion": [
+        "/CdkTimeSleepIntegTestStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "IntegTest"
+      "displayName": "CdkTimeSleepIntegTestStack"
     },
-    "TestDefaultTestDeployAssert12909640.assets": {
+    "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "TestDefaultTestDeployAssert12909640.assets.json",
+        "file": "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "TestDefaultTestDeployAssert12909640": {
+    "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "TestDefaultTestDeployAssert12909640.template.json",
+        "templateFile": "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB.template.json",
+        "terminationProtection": false,
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
@@ -98,7 +166,7 @@
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "TestDefaultTestDeployAssert12909640.assets"
+          "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -107,23 +175,23 @@
         }
       },
       "dependencies": [
-        "TestDefaultTestDeployAssert12909640.assets"
+        "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB.assets"
       ],
       "metadata": {
-        "/Test/DefaultTest/DeployAssert/BootstrapVersion": [
+        "/CdkTimeSleepIntegTest/DefaultTest/DeployAssert/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/Test/DefaultTest/DeployAssert/CheckBootstrapVersion": [
+        "/CdkTimeSleepIntegTest/DefaultTest/DeployAssert/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "Test/DefaultTest/DeployAssert"
+      "displayName": "CdkTimeSleepIntegTest/DefaultTest/DeployAssert"
     },
     "Tree": {
       "type": "cdk:tree",
@@ -131,5 +199,6 @@
         "file": "tree.json"
       }
     }
-  }
+  },
+  "minimumCliVersion": "2.1011.0"
 }

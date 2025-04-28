@@ -29,7 +29,7 @@ export class TimeSleep extends Construct {
 
     const handler = new SingletonFunction(this, 'CustomResourceHandler', {
       // Use raw string to avoid from tightening CDK version requirement
-      runtime: new Runtime('nodejs18.x', RuntimeFamily.NODEJS, { supportsInlineCode: true }),
+      runtime: new Runtime('nodejs22.x', RuntimeFamily.NODEJS, { supportsInlineCode: true }),
       code: Code.fromInline(readFileSync(join(__dirname, '../', 'lambda', 'dist', 'index.js')).toString()),
       handler: 'index.handler',
       uuid: '494c1b46-0d2f-4e3b-9bfd-0b2cf10162f9', // generated for this construct

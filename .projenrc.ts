@@ -6,6 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.1.0', // For using @aws-cdk/integ-runner
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.8.0',
+  majorVersion: 1,
   name: 'cdk-time-sleep',
   repositoryUrl: 'https://github.com/tmokmss/cdk-time-sleep.git',
   eslintOptions: {
@@ -23,8 +24,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'aws-cdk@^2.38.0',
     'aws-cdk-lib@^2.38.0',
     'constructs@^10.0.5',
-    '@aws-cdk/integ-runner@^2.38.0',
-    '@aws-cdk/integ-tests-alpha@^2.38.0-alpha.0',
+    '@aws-cdk/integ-runner',
+    '@aws-cdk/integ-tests-alpha',
   ],
   peerDependencyOptions: {
     pinnedDevDependency: false,

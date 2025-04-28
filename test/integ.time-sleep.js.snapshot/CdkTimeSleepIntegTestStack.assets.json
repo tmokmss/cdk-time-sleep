@@ -1,15 +1,16 @@
 {
-  "version": "29.0.0",
+  "version": "41.0.0",
   "files": {
-    "21fbb51d7b23f6a6c262b46a9caee79d744a3ac019fd45422d988b96d44b2a22": {
+    "7ca1d86f5874f4c75158d601891400ee33a3c644188ee58cba51c580ad2d6558": {
+      "displayName": "CdkTimeSleepIntegTestStack Template",
       "source": {
-        "path": "TestDefaultTestDeployAssert12909640.template.json",
+        "path": "CdkTimeSleepIntegTestStack.template.json",
         "packaging": "file"
       },
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "21fbb51d7b23f6a6c262b46a9caee79d744a3ac019fd45422d988b96d44b2a22.json",
+          "objectKey": "7ca1d86f5874f4c75158d601891400ee33a3c644188ee58cba51c580ad2d6558.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }

@@ -1,15 +1,16 @@
 {
-  "version": "29.0.0",
+  "version": "41.0.0",
   "files": {
-    "c083d4bb9af5e5c158e9cc8ec8c0dca80807bf9399edc6a7fbe95233052f5c93": {
+    "21fbb51d7b23f6a6c262b46a9caee79d744a3ac019fd45422d988b96d44b2a22": {
+      "displayName": "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB Template",
       "source": {
-        "path": "IntegTest.template.json",
+        "path": "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB.template.json",
         "packaging": "file"
       },
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "c083d4bb9af5e5c158e9cc8ec8c0dca80807bf9399edc6a7fbe95233052f5c93.json",
+          "objectKey": "21fbb51d7b23f6a6c262b46a9caee79d744a3ac019fd45422d988b96d44b2a22.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }

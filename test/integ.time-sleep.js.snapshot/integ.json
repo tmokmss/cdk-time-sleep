@@ -1,12 +1,14 @@
 {
-  "version": "29.0.0",
+  "version": "41.0.0",
   "testCases": {
-    "Test/DefaultTest": {
+    "CdkTimeSleepIntegTest/DefaultTest": {
       "stacks": [
-        "IntegTest"
+        "CdkTimeSleepIntegTestStack"
       ],
       "diffAssets": true,
-      "assertionStack": "TestDefaultTestDeployAssert12909640"
+      "assertionStack": "CdkTimeSleepIntegTest/DefaultTest/DeployAssert",
+      "assertionStackName": "CdkTimeSleepIntegTestDefaultTestDeployAssert888B6CDB"
     }
-  }
+  },
+  "minimumCliVersion": "2.1005.0"
 }
