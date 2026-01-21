@@ -5,7 +5,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'tomookam@live.jp',
   cdkVersion: '2.1.0', // For using @aws-cdk/integ-runner
   defaultReleaseBranch: 'main',
-  jsiiVersion: '~5.8.0',
+  jsiiVersion: '~5.9.0',
   majorVersion: 1,
   name: 'cdk-time-sleep',
   repositoryUrl: 'https://github.com/tmokmss/cdk-time-sleep.git',
@@ -19,6 +19,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     compilerOptions: {},
     exclude: ['example', 'test/*.snapshot'],
   },
+  npmTrustedPublishing: true,
   projenrcTs: true,
   devDeps: [
     'aws-cdk@^2.38.0',
