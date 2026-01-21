@@ -1,16 +1,16 @@
 {
-  "version": "41.0.0",
+  "version": "48.0.0",
   "files": {
-    "7ca1d86f5874f4c75158d601891400ee33a3c644188ee58cba51c580ad2d6558": {
+    "b0e31204f219e7f2e047cec8ee716fe9a7232ad61cbe48db064c7117ac04c342": {
       "displayName": "CdkTimeSleepIntegTestStack Template",
       "source": {
         "path": "CdkTimeSleepIntegTestStack.template.json",
         "packaging": "file"
       },
       "destinations": {
-        "current_account-current_region": {
+        "current_account-current_region-394f9cd8": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "7ca1d86f5874f4c75158d601891400ee33a3c644188ee58cba51c580ad2d6558.json",
+          "objectKey": "b0e31204f219e7f2e047cec8ee716fe9a7232ad61cbe48db064c7117ac04c342.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }

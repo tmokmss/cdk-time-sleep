@@ -5,6 +5,7 @@ import { Construct } from 'constructs';
 import { TimeSleep } from '../src/';
 
 const app = new App();
+app.node.setContext('@aws-cdk/aws-lambda:useCdkManagedLogGroup', false);
 
 class TestStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
